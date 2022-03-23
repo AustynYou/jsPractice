@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(a, b, c){
+                let answer;
+                if(a<=b && a<=c){
+                   answer=a;
+                } 
+                else if(b<=c && b<=a){
+                   answer=b;
+                } 
+                else if(c<=a && c<=b){
+                   answer=c;
+                } 
+                return answer;
+            }
+
+            console.log(solution(623, 523, 11));
+        </script>
+    </body>
+</html>
