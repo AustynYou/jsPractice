@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>output result</title>
+    </head>
+    <body>
+        <script>
+            function solution(a,b,c){
+                let answer="YES", max;
+                let sum=a+b+c;
+                if (a>b) max=a;
+                else max=b;
+                if (c>max) c=max;
+                if (sum-max<=max) answer="NO";
+                return answer;
+            }
+            console.log(solution(6,7,11));
+            console.log(solution(13,33,17));
+
+            // my first attempt
+            // function solution(a, b, c){
+            //     let answer="";
+            //     switch (answer){
+            //         case a<c && b<c && a+b>c:
+            //             answer="YES";
+            //             break;
+            //         case b<a && c<a && b+c>a:
+            //             answer="YES";
+            //             break;
+            //         case c<b && a<b && c+a>b:
+            //             answer="YES";
+            //             break;
+            //         default:
+            //         answer="NO";
+            //     }  
+            // }
+        </script>
+    </body>
+</html>
