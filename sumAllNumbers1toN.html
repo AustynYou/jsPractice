@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>output result</title>
+    </head>
+    <body>
+        <script>
+            // problem: write a program to find sum of all natural numbers between 1 to n when the natural number n is entered.
+            function solution(n){
+                let answer=0;
+                if(n<=20){
+                for(var i=1; i<=n; i++){
+                    answer+=i
+                }
+                return answer;
+                } else{
+                    alert("Enter a natural number not exceeding 20.")
+                }
+
+            }
+
+            console.log(solution(6));
+        </script>
+    </body>
+</html>
