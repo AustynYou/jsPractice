@@ -1,19 +1,21 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>출력결과</title>
+        <title>output result</title>
     </head>
     <body>
         <script>
             function solution(arr){
                 let answer=arr;
-                for(let x of arr){
-                    if(x<100){
-                        answer.push(arr);
+                let sum=arr.reduce((a,b)=>a+b, 0);
+                for(let i=0; i<arr.length-1; i++){
+                    for(let j=i+1; j<arr.length; j++){
+                        if(sum-(arr[i]+arr[j])===100){
+                            arr.splice(j,1);
+                            arr.splice(i,1);
+                        }
                     }
-
                 }
-                
             
                 return answer;
             }
